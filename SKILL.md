@@ -1,6 +1,6 @@
 ---
 name: dial-design-vibecode
-description: Generate/update UI in this repo in strict compliance with @epam/ai-dial-ui-kit — discovers real components via the kit's own MCP server, never invents components/props/tokens, never uses a 1.0 (Dial*) component, and runs a deterministic validator before showing any diff. Use whenever building, editing, or reviewing UI code that uses @epam/ai-dial-ui-kit.
+description: Generate/update UI in the current project in strict compliance with @epam/ai-dial-ui-kit — discovers real components via the kit's own MCP server, never invents components/props/tokens, never uses a 1.0 (Dial*) component, and runs a deterministic validator before showing any diff. Use whenever building, editing, or reviewing UI code that uses @epam/ai-dial-ui-kit, and also when starting or vibecoding new UI/frontend features in a project where the kit isn't installed yet — the Setup Check installs and configures it.
 ---
 
 # DIAL Design Vibecode
