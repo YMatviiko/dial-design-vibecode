@@ -26,6 +26,14 @@ be copied in by hand.
 
 ## Setup Check (runs once per session, before any component work)
 
+-1. **Print the skill version.** Read `VERSION` next to this file and say "dial-design-vibecode
+   vX.Y.Z" once, so any bug report names the version. If `VERSION` is missing, say "version
+   unknown". Then, **only if** the network is available and this folder is a git clone, run
+   `git -C <this skill folder> ls-remote --tags origin` (read-only, a few seconds at most) and
+   compare the newest `vX.Y.Z` tag to `VERSION`. If a newer tag exists, tell the engineer once:
+   "a newer version (vX.Y.Z) is available — run `git -C .claude/skills/dial-design-vibecode pull`
+   and restart." Never pull it yourself, never block on this, and say nothing if the check fails
+   or the versions match.
 0. **Bootstrap the validator.** If `validate.mjs` doesn't already exist next to this file (i.e.
    at `.claude/skills/dial-design-vibecode/validate.mjs`), write it out verbatim from the
    "Validator script" section near the end of this file, then continue.
