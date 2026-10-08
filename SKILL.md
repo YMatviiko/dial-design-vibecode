@@ -32,8 +32,10 @@ be copied in by hand.
    `git -C <this skill folder> ls-remote --tags origin` (read-only, a few seconds at most) and
    compare the newest `vX.Y.Z` tag to `VERSION`. If a newer tag exists, tell the engineer once:
    "a newer version (vX.Y.Z) is available — run `git -C .claude/skills/dial-design-vibecode pull`
-   and restart." Never pull it yourself, never block on this, and say nothing if the check fails
-   or the versions match.
+   and restart." Never pull it yourself, never block on this. **If the versions match, or the
+   check fails for any reason (no network, no remote, not a git clone), do not mention the check
+   at all** — no "you're up to date," no error report. The only output is the version line, plus
+   the one-time notice when a newer tag exists.
 0. **Bootstrap the validator.** If `validate.mjs` doesn't already exist next to this file (i.e.
    at `.claude/skills/dial-design-vibecode/validate.mjs`), write it out verbatim from the
    "Validator script" section near the end of this file, then continue.
